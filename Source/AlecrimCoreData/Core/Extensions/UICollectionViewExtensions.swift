@@ -172,13 +172,13 @@
     // MARK: - IndexPath extensions
     
     extension IndexPath {
-        
+
         public init(forItem item: Int, inSection section: Int) {
             self.init(indexes: [section, item])
         }
         
-        public var section: Int { return self[0] }
-        public var item: Int { return self[1] }
+//        public var section: Int { return self[0] }
+//        public var item: Int { return self[1] }
         
     }
     

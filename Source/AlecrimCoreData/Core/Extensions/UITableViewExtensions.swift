@@ -185,7 +185,7 @@
         }
         
         //public var section: Int { return self[0] }
-        public var row: Int { return self[1] }
+//        public var row: Int { return self[1] }
         
     }
     
