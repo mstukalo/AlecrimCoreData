@@ -101,7 +101,7 @@ open class GenericPersistentContainer<ContextType: NSManagedObjectContext> {
     public convenience init(name: String, automaticallyLoadPersistentStores: Bool = true) {
         if let modelURL = Bundle.main.url(forResource: name, withExtension: "momd") ?? Bundle.main.url(forResource: name, withExtension: "mom") {
             if let model = NSManagedObjectModel(contentsOf: modelURL) {
-                self.init(name: name, managedObjectModel: model)
+                self.init(name: name, managedObjectModel: model, automaticallyLoadPersistentStores: automaticallyLoadPersistentStores)
                 return
             }
             
