@@ -275,11 +275,11 @@ extension NSManagedObjectContext {
         
         self.perform {
             // WORKAROUND FOR: http://stackoverflow.com/questions/3923826/nsfetchedresultscontroller-with-predicate-ignores-changes-merged-from-different/3927811#3927811
-            if let updatedObjects = (notification as NSNotification).userInfo?[NSUpdatedObjectsKey] as? Set<NSManagedObject>, !updatedObjects.isEmpty {
-                updatedObjects.forEach {
-                    self.object(with: $0.objectID).willAccessValue(forKey: nil) // ensures that a fault has been fired
-                }
-            }
+//            if let updatedObjects = (notification as NSNotification).userInfo?[NSUpdatedObjectsKey] as? Set<NSManagedObject>, !updatedObjects.isEmpty {
+//                updatedObjects.forEach {
+//                    self.object(with: $0.objectID).willAccessValue(forKey: nil) // ensures that a fault has been fired
+//                }
+//            }
             
             self.mergeChanges(fromContextDidSave: notification)
         }
